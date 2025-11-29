@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Runoja – Runonpaikka</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    
-
-<style>
-        /* UUSI Värimaailma ja Yleiset tyylit */
+    <style>
+        /* CSS TYYLIT: TÄYSIN SAMA KUIN INDEX.HTML-TIEDOSTOSSA */
         :root {
-            --color-light-bg: #F8F8F4; /* Pehmeä, lähes valkoinen pohja */
-            --color-dark-text: #333333; /* Tummanharmaa teksti */
-            --color-card-bg: #FFFFFF; /* Korttien tausta valkoinen */
-            --color-accent: #B886B8; /* Hienostunut laventelin / ruusun sävy korostukseen */
-            --color-nav-link: #6A057F; /* Syvä violetti navigaatioon */
+            --color-dark-bg: #1A1A2E; 
+            --color-light-text: #EAEAEA; 
+            --color-accent: #FF5370; 
+            --color-nav-link: #B0C4DE; 
             --font-main: 'Open Sans', Arial, sans-serif;
         }
 
@@ -22,25 +19,24 @@
             margin: 0;
             padding: 0;
             font-family: var(--font-main);
-            color: var(--color-dark-text); /* Tekstin väri muuttuu tummemmaksi */
-            background-color: var(--color-light-bg); /* Pohjan väri vaaleammaksi */
+            color: var(--color-light-text);
+            background-color: var(--color-dark-bg);
             line-height: 1.6;
         }
 
         /* Yläpalkki (Header) ja Navigaatio */
         header {
-            background-color: rgba(255, 255, 255, 0.9); /* Vaaleampi, hieman läpinäkyvä efekti */
+            background-color: rgba(0, 0, 0, 0.2); 
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Kevyt varjo */
         }
 
         .logo a {
             font-size: 1.8em;
             font-weight: 700;
-            color: var(--color-nav-link); /* Logokin tummempi */
+            color: var(--color-accent);
             text-decoration: none;
             letter-spacing: 1px;
         }
@@ -67,65 +63,7 @@
             color: var(--color-accent);
         }
 
-        /* Etusivun Pääsisältö (Hero Section) - Index.html varten */
-        .hero {
-            text-align: center;
-            padding: 150px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 60vh;
-            color: var(--color-dark-text); /* Teksti tummemmaksi */
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 0.5em;
-            line-height: 1.2;
-            color: var(--color-nav-link); /* Otsikko violetiksi */
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            color: var(--color-dark-text);
-            max-width: 600px;
-        }
-
-        /* Tulevat osiot (Teaser) - Index.html varten */
-        .sections {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .section-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-        }
-
-        .card {
-            background-color: var(--color-card-bg); /* Korttien tausta valkoinen */
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Kevyempi varjo */
-            text-align: left;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hienovarainen korostus */
-        }
-
-        .card h3 {
-            color: var(--color-accent); /* Korostusväri otsikoissa */
-            margin-top: 0;
-        }
-        
-        /* UUSI Runojen Ruudukko-osio - runoja.html varten */
+        /* UUSI Runojen Ruudukko-osio */
         .poetry-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,30 +74,28 @@
         }
 
         .poetry-card {
-            background-color: var(--color-card-bg); /* Korttien tausta valkoinen */
+            background-color: #2C2C47; /* Tummempi tausta korteille */
             padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: left;
-            transition: border 0.3s, transform 0.3s;
+            transition: border 0.3s;
             border-left: 5px solid transparent;
         }
         
         .poetry-card:hover {
-            border-left: 5px solid var(--color-accent); 
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid var(--color-accent); /* Korostus vasemmassa reunassa */
         }
 
         .poetry-card h3 {
-            color: var(--color-nav-link); /* Otsikko violetiksi */
+            color: var(--color-light-text);
             margin-top: 0;
             font-size: 1.4em;
-            cursor: pointer; 
+            cursor: pointer; /* Osoittaa, että otsikko on linkki tulevaisuudessa */
         }
 
         .poetry-card p {
-            color: var(--color-dark-text); /* Teksti tummemmaksi */
+            color: var(--color-nav-link);
             font-size: 0.9em;
             margin-bottom: 0;
         }
@@ -170,24 +106,19 @@
         }
 
         .page-header h1 {
-            color: var(--color-nav-link); /* Otsikko violetiksi */
+            color: var(--color-accent);
             font-size: 2.5em;
         }
-        .page-header p {
-            color: var(--color-dark-text);
-        }
-
 
         footer {
             text-align: center;
             padding: 20px;
             font-size: 0.8em;
-            color: #777777; /* Tummempi harmaa footerille */
-            border-top: 1px solid #E0E0E0; /* Vaaleampi raja */
+            color: #5C5C7A;
+            border-top: 1px solid #2C2C47;
             margin-top: 50px;
         }
     </style>
-
 </head>
 <body>
 
