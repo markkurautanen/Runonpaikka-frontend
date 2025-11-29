@@ -29,40 +29,27 @@
             <p>Löydä syvyys, jaa tarinasi. Runous, kirjallisuus ja musiikki kohtaavat tässä digitaalisessa pimeässä. Tervetuloa lukemaan, kuuntelemaan ja luomaan.</p>
         </section>
 
-
-       <section class="sections">
+        <section class="sections">
             <h2>Tutustu runonpaikkaan</h2>
             <div class="section-grid">
-                
                 <div class="card">
-                    <h3>Runot</h3>
-                    <p>Selaa ja löydä tuhansia runoja klassikoilta ja uusilta kyvyiltä. Jaa oma runosi lukijoiden kesken.</p>
+                    <h3>Runokokoelmat</h3>
+                    <p>Syvenny klassikoihin ja löydä uusia ääniä. Jaa oma runosi yhteisön luettavaksi.</p>
                 </div>
-                
-                <div class="card">
-                    <h3>Kirjat</h3>
-                    <p>Romaanit, antologiat ja teokset kovakantisina tai e-kirjoina suoraan kirjailijoilta.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Äänten maailma</h3>
-                    <p>Kuuntele äänikirjoja ja uniikkeja musiikkikappaleita, jotka on luotu kirjallisuuden inspiroimana.</p>
-                </div>
-
                 <div class="card">
                     <h3>Verkkokauppa</h3>
-                    <p>Tukesi kirjailijoille. Osta teoksia, musiikkia ja taidetta suoraan tekijöiltä.</p>
+                    <p>Tukesi kirjailijoille. Osta suoraan tekijöiltä painettuja teoksia ja e-kirjoja.</p>
                 </div>
-                
                 <div class="card">
-                    <h3>Yhteisö ja blogi</h3>
-                    <p>Keskustele, kommentoi ja luo omia artikkeleitasi. Kirjallisuuden ystävien kohtaamispaikka.</p>
+                    <h3>Äänten Maailma</h3>
+                    <p>Lisensoidut äänikirjat ja ainutlaatuiset musiikkikappaleet kuunneltavaksi heti oston jälkeen.</p>
                 </div>
-                
+                <div class="card">
+                    <h3>Yhteisö & Blogi</h3>
+                    <p>Rekisteröidy, kommentoi ja luo omia artikkeleita. Keskustele kirjallisuudesta muiden kanssa.</p>
+                </div>
             </div>
         </section>
-
-
     </main>
 
     <footer>
