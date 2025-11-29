@@ -1,0 +1,493 @@
+/* style.css */
+
+/* TÄMÄ ON NYT YHTENÄINEN TUMMA TYYLI KAIKILLE SIVUILLE */
+
+:root {
+    --color-dark-bg: #1A1A2E; /* Tumma, syvä violetin/sinisen sävy */
+    --color-light-text: #EAEAEA; /* Lähes valkoinen, pehmeämpi */
+    --color-accent: #FF5370; /* Runollinen korostusväri */
+    --color-nav-link: #B0C4DE; /* Vaalea sinisävy navigaatiolle */
+    --font-main: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    color: var(--color-light-text);
+    background-color: var(--color-dark-bg);
+    line-height: 1.6;
+}
+
+/* Yläpalkki (Header) ja Navigaatio */
+header {
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--color-nav-link);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* Etusivun Pääsisältö (Hero Section) - Index.html varten */
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    color: var(--color-light-text);
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: var(--color-nav-link);
+    max-width: 600px;
+}
+
+/* Tulevat osiot (Teaser) - Index.html varten */
+.sections {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.card {
+    background-color: #2C2C47;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--color-accent);
+    margin-top: 0;
+}
+
+/* Runojen Ruudukko-osio - runoja.html varten */
+.poetry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.poetry-card {
+    background-color: #2C2C47; 
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: border 0.3s;
+    border-left: 5px solid transparent;
+}
+
+.poetry-card:hover {
+    border-left: 5px solid var(--color-accent); 
+}
+
+.poetry-card h3 {
+    color: var(--color-light-text);
+    margin-top: 0;
+    font-size: 1.4em;
+    cursor: pointer; 
+}
+
+.poetry-card p {
+    color: var(--color-nav-link);
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+.page-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.page-header h1 {
+    color: var(--color-accent);
+    font-size: 2.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    color: #5C5C7A;
+    border-top: 1px solid #2C2C47;
+    margin-top: 50px;
+}
+
+/*   Lisäykset verkkokauppaa varten: */
+
+/* Lisätty: Kirjat/Tuotekortti -spesifit tyylit */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Isommat kortit */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.book-card {
+    background-color: #2C2C47; /* Tummempi tausta korteille */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.book-image {
+    width: 100%;
+    height: 350px; /* Kiinteä kuva-alue */
+    background-color: #3A3A4A; /* Placeholder-väri kuvalle */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.book-card h3 {
+    color: var(--color-accent);
+    margin: 10px 0;
+}
+
+.book-card .price {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-nav-link);
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #d14961; /* Hieman tummempi hover-väri */
+}
+
+
+/* Lisätty: Etusivun korttien muuttaminen klikattaviksi linkeiksi */
+
+.section-grid a {
+    text-decoration: none; /* Poistaa alleviivauksen linkeistä */
+    color: inherit; /* Perii tekstin värin vanhemmalta elementiltä */
+    display: block; /* Tekee linkistä lohkotason elementin, jotta se täyttää koko kortin */
+}
+
+.card {
+    /* ... muut vanhat tyylit pysyvät ennallaan ... */
+    position: relative; /* Tarvitaan, jotta linkki voi olla sen päällä */
+    overflow: hidden;
+}
+
+/* UUSI: Hiiren osoitin linkiksi, kun ollaan kortin päällä */
+.card:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* Lisätty: Äänikirjat/Musiikki -spesifit tyylit */
+
+.audio-grid {
+    display: flex;
+    flex-direction: column; /* Järjestys pystysuunnassa */
+    gap: 30px;
+    max-width: 1000px; /* Hiukan kapeampi fokus */
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.audio-card {
+    background-color: #2C2C47;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    display: flex; /* Sisältö vierekkäin */
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.audio-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.audio-cover {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    background-color: #3A3A4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.audio-details {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.audio-details h3 {
+    color: var(--color-accent);
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.audio-details p {
+    color: var(--color-nav-link);
+    margin-bottom: 20px;
+}
+
+.audio-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.play-button, .purchase-button {
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
+}
+
+.play-button:hover {
+    opacity: 0.8;
+}
+
+.purchase-button {
+    background-color: transparent;
+    border: 2px solid var(--color-nav-link);
+    color: var(--color-nav-link);
+}
+
+.purchase-button:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Mobiilinäkymä: Pinotaan äänikortin sisältö */
+@media (max-width: 768px) {
+    .audio-card {
+        flex-direction: column;
+    }
+    .audio-cover {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+/* Lisätty: Hakukentän tyylit */
+.search-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.search-box {
+    background-color: #2C2C47;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-box h4 {
+    color: var(--color-nav-link);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 1.1em;
+    background-color: #1A1A2E;
+    color: var(--color-light-text);
+    box-sizing: border-box; 
+}
+
+/* Uusi osion otsikko (esim. "Uudet Äänikirjat") */
+.section-title {
+    max-width: 1000px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+    color: var(--color-accent);
+    font-size: 1.8em;
+}
+
+
+
+/* Lisätty: Blogi ja Keskustelu -spesifit tyylit */
+
+.blog-list {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.blog-article-card {
+    background-color: #2C2C47; 
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--color-accent); /* Merkki blogiartikkeleille */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.blog-article-card h3 {
+    color: var(--color-light-text);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.blog-meta {
+    font-size: 0.9em;
+    color: var(--color-nav-link);
+    margin-bottom: 15px;
+}
+
+.blog-meta span {
+    margin-right: 15px;
+}
+
+
+/* Keskustelufoorumin esikatselu */
+.forum-teaser {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 25px;
+    background-color: #151525; /* Erittäin tumma tausta erottuu */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.forum-teaser h2 {
+    color: var(--color-accent);
+    margin-top: 0;
+    border-bottom: 1px solid #3A3A4A;
+    padding-bottom: 10px;
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+}
+
+.topic-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #3A3A4A;
+    font-size: 1.1em;
+}
+
+.topic-list li:last-child {
+    border-bottom: none;
+}
+
+.topic-list a {
+    color: var(--color-nav-link);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.topic-list a:hover {
+    color: var(--color-accent);
+}
