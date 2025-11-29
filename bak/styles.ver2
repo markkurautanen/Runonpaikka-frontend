@@ -240,23 +240,3 @@ footer {
 .buy-button:hover {
     background-color: #d14961; /* Hieman tummempi hover-väri */
 }
-
-
-/* Lisätty: Etusivun korttien muuttaminen klikattaviksi linkeiksi */
-
-.section-grid a {
-    text-decoration: none; /* Poistaa alleviivauksen linkeistä */
-    color: inherit; /* Perii tekstin värin vanhemmalta elementiltä */
-    display: block; /* Tekee linkistä lohkotason elementin, jotta se täyttää koko kortin */
-}
-
-.card {
-    /* ... muut vanhat tyylit pysyvät ennallaan ... */
-    position: relative; /* Tarvitaan, jotta linkki voi olla sen päällä */
-    overflow: hidden;
-}
-
-/* UUSI: Hiiren osoitin linkiksi, kun ollaan kortin päällä */
-.card:hover {
-    cursor: pointer;
-}
