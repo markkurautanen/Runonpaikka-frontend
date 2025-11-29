@@ -404,3 +404,90 @@ footer {
     color: var(--color-accent);
     font-size: 1.8em;
 }
+
+
+
+/* Lisätty: Blogi ja Keskustelu -spesifit tyylit */
+
+.blog-list {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.blog-article-card {
+    background-color: #2C2C47; 
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--color-accent); /* Merkki blogiartikkeleille */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.blog-article-card h3 {
+    color: var(--color-light-text);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.blog-meta {
+    font-size: 0.9em;
+    color: var(--color-nav-link);
+    margin-bottom: 15px;
+}
+
+.blog-meta span {
+    margin-right: 15px;
+}
+
+
+/* Keskustelufoorumin esikatselu */
+.forum-teaser {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 25px;
+    background-color: #151525; /* Erittäin tumma tausta erottuu */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.forum-teaser h2 {
+    color: var(--color-accent);
+    margin-top: 0;
+    border-bottom: 1px solid #3A3A4A;
+    padding-bottom: 10px;
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+}
+
+.topic-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #3A3A4A;
+    font-size: 1.1em;
+}
+
+.topic-list li:last-child {
+    border-bottom: none;
+}
+
+.topic-list a {
+    color: var(--color-nav-link);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.topic-list a:hover {
+    color: var(--color-accent);
+}
