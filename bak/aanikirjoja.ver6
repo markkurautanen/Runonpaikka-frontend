@@ -22,20 +22,12 @@
         </nav>
     </header>
 
-<main>
+    <main>
         <section class="page-header">
             <h1>Äänten maailma: Kuuntele ja Koe</h1>
             <p>Erikoiskokoelma lisensoituja äänikirjoja ja musiikkia. Maksa kerran, kuuntele ikuisesti.</p>
         </section>
-        
-        <section class="search-container">
-            <div class="search-box">
-                <h4>Hae tekijän tai nimen mukaan</h4>
-                <input type="text" placeholder="Etsi äänikirjoja tai musiikkia...">
-            </div>
-        </section>
 
-        <h2 class="section-title">Uudet äänikirjat</h2>
         <section class="audio-grid">
             
             <div class="audio-card">
@@ -51,24 +43,6 @@
                 </div>
             </div>
 
-            <div class="audio-card">
-                <div class="audio-cover">Kansikuva: Uusi Aamu</div>
-                <div class="audio-details">
-                    <h3>Uusi Aamu (Runoantologia)</h3>
-                    <p>Lukija: Aino Virtanen | Kesto: 55 min</p>
-                    <p>Kokoelma lyhyitä, aamun inspiroimia runoja.</p>
-                    <div class="audio-buttons">
-                        <a href="#" class="play-button">▶︎ Kuuntele näyte</a>
-                        <a href="#" class="purchase-button">Osta 7.50 €</a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <h2 class="section-title">Kokoelma: Muut teokset</h2>
-        <section class="audio-grid">
-            
             <div class="audio-card">
                 <div class="audio-cover">Kansikuva: Talvisia säveliä</div>
                 <div class="audio-details">
