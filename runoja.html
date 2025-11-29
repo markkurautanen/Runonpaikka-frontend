@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runoja – Runonpaikka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS TYYLIT: TÄYSIN SAMA KUIN INDEX.HTML-TIEDOSTOSSA */
+        :root {
+            --color-dark-bg: #1A1A2E; 
+            --color-light-text: #EAEAEA; 
+            --color-accent: #FF5370; 
+            --color-nav-link: #B0C4DE; 
+            --font-main: 'Open Sans', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            color: var(--color-light-text);
+            background-color: var(--color-dark-bg);
+            line-height: 1.6;
+        }
+
+        /* Yläpalkki (Header) ja Navigaatio */
+        header {
+            background-color: rgba(0, 0, 0, 0.2); 
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--color-nav-link);
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-accent);
+        }
+
+        /* UUSI Runojen Ruudukko-osio */
+        .poetry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .poetry-card {
+            background-color: #2C2C47; /* Tummempi tausta korteille */
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            transition: border 0.3s;
+            border-left: 5px solid transparent;
+        }
+        
+        .poetry-card:hover {
+            border-left: 5px solid var(--color-accent); /* Korostus vasemmassa reunassa */
+        }
+
+        .poetry-card h3 {
+            color: var(--color-light-text);
+            margin-top: 0;
+            font-size: 1.4em;
+            cursor: pointer; /* Osoittaa, että otsikko on linkki tulevaisuudessa */
+        }
+
+        .poetry-card p {
+            color: var(--color-nav-link);
+            font-size: 0.9em;
+            margin-bottom: 0;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .page-header h1 {
+            color: var(--color-accent);
+            font-size: 2.5em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #5C5C7A;
+            border-top: 1px solid #2C2C47;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">Runonpaikka</a></div>
+        <nav>
+            <ul>
+                <li><a href="runoja.html">Runoja</a></li>
+                <li><a href="#kirjoja">Kirjoja</a></li>
+                <li><a href="#aanikirjoja">Äänikirjoja</a></li>
+                <li><a href="#kauppa">Kauppa</a></li>
+                <li><a href="#blogi">Blogi / Keskustelu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Kaikuja hiljaisuudesta</h1>
+            <p>Tutustu kokoelmaamme, joka sisältää runoja klassikoilta ja nousevilta kyvyiltä.</p>
+        </section>
+
+        <section class="poetry-grid">
+            
+            <div class="poetry-card">
+                <h3>Kaipauksen laulu</h3>
+                <p>Kirjailija: Eino Leino</p>
+            </div>
+
+            <div class="poetry-card">
+                <h3>Kuuletko kuinka puu puhuu</h3>
+                <p>Kirjailija: L. Onerva</p>
+            </div>
+
+            <div class="poetry-card">
+                <h3>Aamun tähdet</h3>
+                <p>Kirjailija: Saima Harmaja</p>
+            </div>
+
+            <div class="poetry-card">
+                <h3>Hiljainen hetki</h3>
+                <p>Kirjailija: Tuntematon</p>
+            </div>
+
+            <div class="poetry-card">
+                <h3>Kevään ensi sade</h3>
+                <p>Kirjailija: P. Mustapää</p>
+            </div>
+
+            <div class="poetry-card">
+                <h3>Varjojen tanssi</h3>
+                <p>Kirjailija: Katri Vala</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Runonpaikka. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+</body>
+</html>
