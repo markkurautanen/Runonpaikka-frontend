@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runonpaikka – Sielun ja Sanojen Koti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Yleiset tyylit ja tumma pohja */
+        :root {
+            --color-dark-bg: #1A1A2E; /* Tumma, syvä violetin/sinisen sävy */
+            --color-light-text: #EAEAEA; /* Lähes valkoinen, pehmeämpi */
+            --color-accent: #FF5370; /* Runollinen korostusväri */
+            --color-nav-link: #B0C4DE; /* Vaalea sinisävy navigaatiolle */
+            --font-main: 'Open Sans', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            color: var(--color-light-text);
+            background-color: var(--color-dark-bg);
+            line-height: 1.6;
+        }
+
+        /* Yläpalkki (Header) ja Navigaatio */
+        header {
+            background-color: rgba(0, 0, 0, 0.2); /* Läpinäkyvä efekti tummalla */
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--color-nav-link);
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Etusivun Pääsisältö (Hero Section) */
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+            color: var(--color-light-text);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            color: var(--color-nav-link);
+            max-width: 600px;
+        }
+
+        /* Tulevat osiot (Teaser) */
+        .sections {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background-color: #2C2C47;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--color-accent);
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #5C5C7A;
+            border-top: 1px solid #2C2C47;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="/">Runonpaikka</a></div>
+        <nav>
+            <ul>
+                <li><a href="#runoja">Runoja</a></li>
+                <li><a href="#kirjoja">Kirjoja</a></li>
+                <li><a href="#aanikirjoja">Äänikirjoja</a></li>
+                <li><a href="#kauppa">Kauppa</a></li>
+                <li><a href="#blogi">Blogi / Keskustelu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Runonpaikka – Sielun ja Sanojen Koti.</h1>
+            <p>Löydä syvyys, jaa tarinasi. Runous, kirjallisuus ja musiikki kohtaavat tässä digitaalisessa pimeässä. Tervetuloa lukemaan, kuuntelemaan ja luomaan.</p>
+        </section>
+
+        <section class="sections">
+            <h2>Tutustu runonpaikkaan</h2>
+            <div class="section-grid">
+                <div class="card">
+                    <h3>Runokokoelmat</h3>
+                    <p>Syvenny klassikoihin ja löydä uusia ääniä. Jaa oma runosi yhteisön luettavaksi.</p>
+                </div>
+                <div class="card">
+                    <h3>Verkkokauppa</h3>
+                    <p>Tukesi kirjailijoille. Osta suoraan tekijöiltä painettuja teoksia ja e-kirjoja.</p>
+                </div>
+                <div class="card">
+                    <h3>Äänten Maailma</h3>
+                    <p>Lisensoidut äänikirjat ja ainutlaatuiset musiikkikappaleet kuunneltavaksi heti oston jälkeen.</p>
+                </div>
+                <div class="card">
+                    <h3>Yhteisö & Blogi</h3>
+                    <p>Rekisteröidy, kommentoi ja luo omia artikkeleita. Keskustele kirjallisuudesta muiden kanssa.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Runonpaikka. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+</body>
+</html>
